@@ -3,193 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ГЛАЗОВ | Биография</title>
+    <title>Глазов Андрей - Официальный сайт</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
         body {
-            background-color: #000;
-            color: white;
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            text-align: center;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
         }
         
         .header {
-            font-size: 72px;
-            margin: 20px 0;
-            color: red;
-            text-shadow: 0 0 10px #f00, 0 0 20px #f00;
-            animation: glow 1s ease-in-out infinite alternate;
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #ff0000, #8b0000);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            animation: glow 2s ease-in-out infinite alternate;
         }
         
         @keyframes glow {
             from {
-                text-shadow: 0 0 10px #f00, 0 0 20px #f00;
+                text-shadow: 0 0 5px #fff, 0 0 10px #ff0000, 0 0 15px #ff0000;
             }
             to {
-                text-shadow: 0 0 15px #f00, 0 0 30px #f00, 0 0 40px #f00;
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000;
             }
-        }
-        
-        .profile {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        
-        .profile-pic {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 3px solid red;
-            margin-right: 15px;
-            object-fit: cover;
-        }
-        
-        .profile-name {
-            font-size: 24px;
-            color: red;
-            text-shadow: 0 0 5px #f00;
         }
         
         .content {
             max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-            font-size: 18px;
-            line-height: 1.6;
+            margin: 40px auto;
             padding: 20px;
-            background-color: rgba(255, 0, 0, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
         }
         
-        .bio-text {
-            color: white;
-            text-shadow: 0 0 5px #fff, 0 0 10px #00f;
+        .bio {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: justify;
+            background: linear-gradient(135deg, #ff0000, #000);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border: 1px solid #ff0000;
+            border-radius: 10px;
             margin-bottom: 30px;
+            animation: textGlow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes textGlow {
+            0% {
+                box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+            }
         }
         
         .buttons {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin: 30px 0;
             flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
         }
         
         .btn {
-            padding: 10px 20px;
-            background: red;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-        }
-        
-        .btn:hover {
-            background: #ff3333;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.9);
-            transform: scale(1.05);
-        }
-        
-        .telegram-btn {
             padding: 12px 25px;
-            background: white;
-            color: black;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            border-radius: 50px;
+            font-size: 1rem;
             font-weight: bold;
-            margin: 30px auto;
-            display: block;
-            transition: all 0.3s;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .telegram-btn:hover {
-            background: #e6e6e6;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+        .btn-primary {
+            background: linear-gradient(135deg, #0066ff, #0033aa);
+            color: white;
+            box-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 102, 255, 0.8);
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #ff0000, #aa0000);
+            color: white;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+        
+        .btn-danger:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        }
+        
+        .btn-warning {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #000;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+        }
+        
+        .btn-warning:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
         }
         
         .info-box {
             display: none;
+            padding: 20px;
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #0066ff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
+            color: #fff;
+            animation: boxGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes boxGlow {
+            from {
+                box-shadow: 0 0 5px rgba(0, 102, 255, 0.5);
+            }
+            to {
+                box-shadow: 0 0 15px rgba(0, 102, 255, 0.8);
+            }
+        }
+        
+        .telegram-btn {
+            display: block;
+            width: 250px;
+            margin: 30px auto;
             padding: 15px;
-            margin: 20px 0;
-            background-color: rgba(0, 0, 255, 0.2);
-            border-left: 4px solid blue;
-            border-radius: 5px;
+            background: linear-gradient(135deg, #0088cc, #005580);
             color: white;
-            text-shadow: 0 0 5px #00f;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px rgba(0, 136, 204, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .telegram-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 136, 204, 0.8);
         }
         
         .warning {
+            text-align: center;
             margin-top: 40px;
-            padding: 10px;
-            background-color: rgba(255, 0, 0, 0.3);
-            border: 1px solid red;
-            border-radius: 5px;
+            padding: 15px;
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid #ff0000;
+            border-radius: 10px;
             font-weight: bold;
-            color: white;
-            text-shadow: 0 0 5px #f00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: warningGlow 1.5s ease-in-out infinite alternate;
+        }
+        
+        @keyframes warningGlow {
+            from {
+                box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+            }
+            to {
+                box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+            }
+        }
+        
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
-    <div class="header">ГЛАЗОВ</div>
+    <div class="particles" id="particles-js"></div>
     
-    <div class="profile">
-        <img src="photo2.jpg" alt="Аватар Андрея" class="profile-pic">
-        <div class="profile-name">Андрей (ГЛАЗОВ)</div>
+    <div class="header">
+        <h1>ГЛАЗОВ (АНДРЕЙ)</h1>
     </div>
     
     <div class="content">
-        <div class="bio-text">
-            <p>Я, Андрей, начал интересоваться DDoS и SWAT с 11 лет. На протяжении 5 лет я развивал свои навыки, а затем начал открыто работать, используя эти навыки для помощи мирным целям. Также я занимаюсь кодингом.</p>
-            
-            <p>Я побывал во многих кланах, где получил ценный опыт и отточил свои умения. Моя деятельность всегда направлена на развитие и совершенствование технических навыков.</p>
+        <div class="bio">
+            <p>Биография: я Андрей начал интересоваться ддосом и сватом с 11 лет. Я развивал свои навыки на протяжении 5 лет, потом уже начал открыто работать этими навыками, помогая мирным. А также занимаюсь кодингом.</p>
         </div>
         
         <div class="buttons">
-            <button class="btn" onclick="showInfo('swat')">СВАТ</button>
-            <button class="btn" onclick="showInfo('ddos')">ДДОС</button>
-            <button class="btn" onclick="showInfo('donos')">ДОНОС</button>
+            <button class="btn btn-primary" onclick="showInfo('swat')">СВАТ</button>
+            <button class="btn btn-danger" onclick="showInfo('ddos')">ДДОС</button>
+            <button class="btn btn-warning" onclick="showInfo('donos')">ДОНОС</button>
         </div>
         
         <div id="swat-info" class="info-box">
             <h3>Что такое SWAT?</h3>
-            <p>SWAT (Special Weapons And Tactics) - это специальные тактические подразделения полиции. В интернет-культуре "сватить" означает ложный вызов спецназа по чужому адресу.</p>
+            <p>SWAT (Special Weapons and Tactics) - это специальное подразделение полиции, обученное для выполнения высокоопасных операций, которые обычные полицейские выполнить не могут. В интернет-сленге "свать" часто означает ложный вызов спецподразделений по адресу ничего не подозревающего человека.</p>
         </div>
         
         <div id="ddos-info" class="info-box">
             <h3>Что такое DDoS?</h3>
-            <p>DDoS (Distributed Denial of Service) - это распределённая атака на компьютерную систему с целью довести её до отказа в обслуживании.</p>
+            <p>DDoS (Distributed Denial of Service) - это кибератака, направленная на перегрузку сервера или сети большим количеством запросов, что приводит к отказу в обслуживании легитимных пользователей. Атаки DDoS могут использоваться как для протестов, так и для незаконных целей.</p>
         </div>
         
         <div id="donos-info" class="info-box">
             <h3>Что такое ДОНОС?</h3>
-            <p>Донос в интернет-среде - это сообщение о нарушении правил платформы или законов с целью наказания другого пользователя.</p>
+            <p>Донос (или "доксинг") - это сбор и публикация личной информации о человеке без его согласия с целью причинения вреда. Это может включать в себя распространение реальных имен, адресов, номеров телефонов и другой персональной информации.</p>
         </div>
         
-        <button class="telegram-btn" onclick="window.open('https://t.me/sellsaks', '_blank')">Перевести меня на Глазова</button>
+        <a href="https://t.me/sellsaks" class="telegram-btn" target="_blank">Перейти к Глазову</a>
         
         <div class="warning">
             ВАЖНО: за бесплатно ничего не делаю!
         </div>
     </div>
-
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        // Инициализация частиц для фона
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ff0000"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ff0000",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+        
+        // Функция для показа информации
         function showInfo(type) {
-            // Сначала скрываем все информационные блоки
+            // Скрываем все info-box
             document.querySelectorAll('.info-box').forEach(box => {
                 box.style.display = 'none';
             });
             
-            // Показываем нужный блок
+            // Показываем выбранный info-box
             document.getElementById(`${type}-info`).style.display = 'block';
         }
     </script>
