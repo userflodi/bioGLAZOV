@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГЛАЗОВ | Биография</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header {
+            font-size: 72px;
+            margin: 20px 0;
+            color: red;
+            text-shadow: 0 0 10px #f00, 0 0 20px #f00;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #f00, 0 0 20px #f00;
+            }
+            to {
+                text-shadow: 0 0 15px #f00, 0 0 30px #f00, 0 0 40px #f00;
+            }
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid red;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .profile-name {
+            font-size: 24px;
+            color: red;
+            text-shadow: 0 0 5px #f00;
+        }
+        
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: rgba(255, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+        
+        .bio-text {
+            color: white;
+            text-shadow: 0 0 5px #fff, 0 0 10px #00f;
+            margin-bottom: 30px;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        }
+        
+        .btn:hover {
+            background: #ff3333;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.9);
+            transform: scale(1.05);
+        }
+        
+        .telegram-btn {
+            padding: 12px 25px;
+            background: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 30px auto;
+            display: block;
+            transition: all 0.3s;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        
+        .telegram-btn:hover {
+            background: #e6e6e6;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+        }
+        
+        .info-box {
+            display: none;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: rgba(0, 0, 255, 0.2);
+            border-left: 4px solid blue;
+            border-radius: 5px;
+            color: white;
+            text-shadow: 0 0 5px #00f;
+        }
+        
+        .warning {
+            margin-top: 40px;
+            padding: 10px;
+            background-color: rgba(255, 0, 0, 0.3);
+            border: 1px solid red;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 5px #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">ГЛАЗОВ</div>
+    
+    <div class="profile">
+        <img src="photo2.jpg" alt="Аватар Андрея" class="profile-pic">
+        <div class="profile-name">Андрей (ГЛАЗОВ)</div>
+    </div>
+    
+    <div class="content">
+        <div class="bio-text">
+            <p>Я, Андрей, начал интересоваться DDoS и SWAT с 11 лет. На протяжении 5 лет я развивал свои навыки, а затем начал открыто работать, используя эти навыки для помощи мирным целям. Также я занимаюсь кодингом.</p>
+            
+            <p>Я побывал во многих кланах, где получил ценный опыт и отточил свои умения. Моя деятельность всегда направлена на развитие и совершенствование технических навыков.</p>
+        </div>
+        
+        <div class="buttons">
+            <button class="btn" onclick="showInfo('swat')">СВАТ</button>
+            <button class="btn" onclick="showInfo('ddos')">ДДОС</button>
+            <button class="btn" onclick="showInfo('donos')">ДОНОС</button>
+        </div>
+        
+        <div id="swat-info" class="info-box">
+            <h3>Что такое SWAT?</h3>
+            <p>SWAT (Special Weapons And Tactics) - это специальные тактические подразделения полиции. В интернет-культуре "сватить" означает ложный вызов спецназа по чужому адресу.</p>
+        </div>
+        
+        <div id="ddos-info" class="info-box">
+            <h3>Что такое DDoS?</h3>
+            <p>DDoS (Distributed Denial of Service) - это распределённая атака на компьютерную систему с целью довести её до отказа в обслуживании.</p>
+        </div>
+        
+        <div id="donos-info" class="info-box">
+            <h3>Что такое ДОНОС?</h3>
+            <p>Донос в интернет-среде - это сообщение о нарушении правил платформы или законов с целью наказания другого пользователя.</p>
+        </div>
+        
+        <button class="telegram-btn" onclick="window.open('https://t.me/sellsaks', '_blank')">Перевести меня на Глазова</button>
+        
+        <div class="warning">
+            ВАЖНО: за бесплатно ничего не делаю!
+        </div>
+    </div>
+
+    <script>
+        function showInfo(type) {
+            // Сначала скрываем все информационные блоки
+            document.querySelectorAll('.info-box').forEach(box => {
+                box.style.display = 'none';
+            });
+            
+            // Показываем нужный блок
+            document.getElementById(`${type}-info`).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
